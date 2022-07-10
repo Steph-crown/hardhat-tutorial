@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >0.7.0;
+import "hardhat/console.sol";
 
 contract Token {
   string public name = "My Hardhat Token";
@@ -23,6 +24,7 @@ contract Token {
     // that is deploying the contract.
     balances[msg.sender] = totalSupply;
     owner = msg.sender;
+    console.log("Token contract deployed");
   }
 
   /**
